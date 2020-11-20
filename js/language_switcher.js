@@ -35,3 +35,58 @@ document.querySelectorAll('.dropdown-menu > .dropdown-item > .lang').forEach((op
 		hiddenInput.value = e.currentTarget.querySelector('.vlang').innerText;
 	});
 });
+
+/* const destination = document.getElementById("inputDestination");
+
+const arrive = document.getElementById("inputArrive");
+
+const departure = document.getElementById("inputDeparture");
+
+document.getElementById("frmSearch").addEventListener('submit', function(e)
+{
+
+	if(destination.value === "")
+	{
+		destination.classList.add("bg-dark");
+	}
+	
+	e.preventDefault();
+	
+}
+
+) */
+
+
+(function () {
+	'use strict'
+  
+	// Fetch all the forms we want to apply custom Bootstrap validation styles to
+	var forms = document.querySelectorAll('.needs-validation')
+  
+	// Loop over them and prevent submission
+	Array.prototype.slice.call(forms)
+	  .forEach(function (form) {
+		form.addEventListener('submit', function (event) {
+		  if (!form.checkValidity()) {
+			event.preventDefault()
+			event.stopPropagation()
+			
+		  }
+		  else
+		  {
+			/* const destination = document.getElementById("inputDestination");
+
+			const arrive = document.getElementById("inputArrive");
+			
+			const departure = document.getElementById("inputDeparture");
+
+			const guest = document.getElementById("inputGuest");
+
+			alert("Destino: " + destination.value + " Arriba: " + arrive.value +" Salida: " + departure.value + " Guest: " + guest.value);
+		  */ }
+  
+		  form.classList.add('was-validated')
+		  event.preventDefault()
+		}, false)
+	  })
+  })()
